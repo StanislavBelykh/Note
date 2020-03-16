@@ -15,6 +15,9 @@
 		BF3616652418D578001BAA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3616632418D578001BAA58 /* LaunchScreen.storyboard */; };
 		BF3A951E241B8E0200FBD505 /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A951D241B8E0200FBD505 /* FoldersViewController.swift */; };
 		BF3A9520241C0BA100FBD505 /* FoldersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A951F241C0BA100FBD505 /* FoldersTableViewCell.swift */; };
+		BF6A04F6241F6E58005AF6F6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A04F5241F6E58005AF6F6 /* NotesViewController.swift */; };
+		BF6A04F8241F6FB5005AF6F6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A04F7241F6FB5005AF6F6 /* Note.swift */; };
+		BF6A04FA241F7069005AF6F6 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A04F9241F7069005AF6F6 /* Folder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		BF3616662418D578001BAA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3A951D241B8E0200FBD505 /* FoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
 		BF3A951F241C0BA100FBD505 /* FoldersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersTableViewCell.swift; sourceTree = "<group>"; };
+		BF6A04F5241F6E58005AF6F6 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		BF6A04F7241F6FB5005AF6F6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		BF6A04F9241F7069005AF6F6 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,8 @@
 				BF3616552418D574001BAA58 /* AppDelegate.swift */,
 				BF3616572418D574001BAA58 /* SceneDelegate.swift */,
 				BF36165B2418D574001BAA58 /* Main.storyboard */,
-				BF3A951D241B8E0200FBD505 /* FoldersViewController.swift */,
+				BF6A04FB241F7255005AF6F6 /* Models */,
+				BF6A04FC241F7489005AF6F6 /* Controllers */,
 				BF3A951F241C0BA100FBD505 /* FoldersTableViewCell.swift */,
 				BF3616612418D578001BAA58 /* Assets.xcassets */,
 				BF3616632418D578001BAA58 /* LaunchScreen.storyboard */,
@@ -71,6 +78,24 @@
 				BF36165E2418D574001BAA58 /* Note.xcdatamodeld */,
 			);
 			path = Note;
+			sourceTree = "<group>";
+		};
+		BF6A04FB241F7255005AF6F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF6A04F7241F6FB5005AF6F6 /* Note.swift */,
+				BF6A04F9241F7069005AF6F6 /* Folder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF6A04FC241F7489005AF6F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF3A951D241B8E0200FBD505 /* FoldersViewController.swift */,
+				BF6A04F5241F6E58005AF6F6 /* NotesViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3A9520241C0BA100FBD505 /* FoldersTableViewCell.swift in Sources */,
+				BF6A04FA241F7069005AF6F6 /* Folder.swift in Sources */,
 				BF3A951E241B8E0200FBD505 /* FoldersViewController.swift in Sources */,
+				BF6A04F6241F6E58005AF6F6 /* NotesViewController.swift in Sources */,
+				BF6A04F8241F6FB5005AF6F6 /* Note.swift in Sources */,
 				BF3616562418D574001BAA58 /* AppDelegate.swift in Sources */,
 				BF3616582418D574001BAA58 /* SceneDelegate.swift in Sources */,
 				BF3616602418D574001BAA58 /* Note.xcdatamodeld in Sources */,

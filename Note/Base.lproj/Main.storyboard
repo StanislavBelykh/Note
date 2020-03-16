@@ -91,11 +91,28 @@
                     <navigationItem key="navigationItem" title="Папки" id="fyt-Vh-GK5"/>
                     <connections>
                         <outlet property="foldersTableView" destination="tMI-Nv-Urv" id="Fb6-Yp-L4C"/>
+                        <segue destination="iWD-hq-ZOa" kind="show" identifier="SegueNotes" id="YVE-rV-Iek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8B-TU-u5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2413.04347826087" y="669.64285714285711"/>
+            <point key="canvasLocation" x="2357" y="670"/>
+        </scene>
+        <!--Notes View Controller-->
+        <scene sceneID="jbb-84-bvq">
+            <objects>
+                <viewController id="iWD-hq-ZOa" customClass="NotesViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IxX-ba-KRz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1VC-Zo-h4m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I1X-eZ-oJE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nc2-Vp-hDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3313" y="670"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AuP-YB-OVE">

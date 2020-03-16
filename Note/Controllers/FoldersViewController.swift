@@ -12,7 +12,7 @@ class FoldersViewController: UIViewController {
     @IBOutlet weak var foldersTableView: UITableView!
     
     
-    var folders:[String] = []
+    var folders:[Folder] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,8 @@ class FoldersViewController: UIViewController {
             let text = alert.textFields?.first?.text
             
             if let text = text{
-                self.folders.append(text)
+                let folder = Folder(title: text, notes: nil)
+                self.folders.append(folder)
             }
             self.foldersTableView.reloadData()
         }
@@ -56,6 +57,8 @@ class FoldersViewController: UIViewController {
     @objc func editTableOfFolders(){
         print("Нажата кнопка править")
     }
+    
+    prepareForSegue
 }
 extension FoldersViewController: UITableViewDataSource{
     
@@ -66,8 +69,9 @@ extension FoldersViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IdentifierFolderCell", for: indexPath) as! FoldersTableViewCell
-        cell.folderNameLabel.text = folders[indexPath.row]
-        cell.countOfNoteInFolderLable.text = "0"
+        let folder = folders[indexPath.row]
+        cell.folderNameLabel.text = folder.title
+        cell.countOfNoteInFolderLable.text = String(folder.notes?.count ?? 0)
         return cell
     }
     
