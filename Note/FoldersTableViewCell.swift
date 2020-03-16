@@ -13,10 +13,5 @@ class FoldersTableViewCell: UITableViewCell {
     @IBOutlet weak var folderNameLabel: UILabel!
     
     @IBOutlet weak var countOfNoteInFolderLable: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
 
 }

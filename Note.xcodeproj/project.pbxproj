@@ -18,6 +18,7 @@
 		BF6A04F6241F6E58005AF6F6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A04F5241F6E58005AF6F6 /* NotesViewController.swift */; };
 		BF6A04F8241F6FB5005AF6F6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A04F7241F6FB5005AF6F6 /* Note.swift */; };
 		BF6A04FA241F7069005AF6F6 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A04F9241F7069005AF6F6 /* Folder.swift */; };
+		BFDCA8FB24201B540082339E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDCA8FA24201B540082339E /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BF6A04F5241F6E58005AF6F6 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		BF6A04F7241F6FB5005AF6F6 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		BF6A04F9241F7069005AF6F6 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		BFDCA8FA24201B540082339E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteTableViewCell.swift; path = Note/NoteTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				BF6A04FB241F7255005AF6F6 /* Models */,
 				BF6A04FC241F7489005AF6F6 /* Controllers */,
 				BF3A951F241C0BA100FBD505 /* FoldersTableViewCell.swift */,
+				BFDCA8FA24201B540082339E /* NoteTableViewCell.swift */,
 				BF3616612418D578001BAA58 /* Assets.xcassets */,
 				BF3616632418D578001BAA58 /* LaunchScreen.storyboard */,
 				BF3616662418D578001BAA58 /* Info.plist */,
@@ -174,6 +177,7 @@
 				BF3A951E241B8E0200FBD505 /* FoldersViewController.swift in Sources */,
 				BF6A04F6241F6E58005AF6F6 /* NotesViewController.swift in Sources */,
 				BF6A04F8241F6FB5005AF6F6 /* Note.swift in Sources */,
+				BFDCA8FB24201B540082339E /* NoteTableViewCell.swift in Sources */,
 				BF3616562418D574001BAA58 /* AppDelegate.swift in Sources */,
 				BF3616582418D574001BAA58 /* SceneDelegate.swift in Sources */,
 				BF3616602418D574001BAA58 /* Note.xcdatamodeld in Sources */,

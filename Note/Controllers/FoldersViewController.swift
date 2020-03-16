@@ -32,7 +32,9 @@ class FoldersViewController: UIViewController {
             let text = alert.textFields?.first?.text
             
             if let text = text{
-                let folder = Folder(title: text, notes: nil)
+                var folder = Folder(title: text, notes: [Note]())
+                //Заглушка при создании заметки для проверки отображения ячейки в Notes
+                folder.notes = [Note(title: "Title", body: nil, createDate: nil, editDate: nil)]
                 self.folders.append(folder)
             }
             self.foldersTableView.reloadData()
@@ -50,16 +52,28 @@ class FoldersViewController: UIViewController {
     
     func setNavigationBar(){
         navigationController?.navigationBar.prefersLargeTitles = true
-        let editNavigationBarItem = UIBarButtonItem(title: "Править", style: .plain, target: self, action: #selector(editTableOfFolders))
+        let editNavigationBarItem = UIBarButtonItem(title: "Править",
+                                                    style: .plain,
+                                                    target: self,
+                                                    action: #selector(editTableOfFolders))
         navigationItem.rightBarButtonItem = editNavigationBarItem
     }
     
     @objc func editTableOfFolders(){
         print("Нажата кнопка править")
     }
-    
-    prepareForSegue
+    //MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueNotes" {
+            if let indexPath = self.foldersTableView.indexPathForSelectedRow {
+                let controller = segue.destination as! NotesViewController
+                controller.notes = folders[indexPath.row].notes
+                controller.title = folders[indexPath.row].title
+            }
+        }
+    }
 }
+//MARK: - DateSourse
 extension FoldersViewController: UITableViewDataSource{
     
     
@@ -71,12 +85,14 @@ extension FoldersViewController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "IdentifierFolderCell", for: indexPath) as! FoldersTableViewCell
         let folder = folders[indexPath.row]
         cell.folderNameLabel.text = folder.title
-        cell.countOfNoteInFolderLable.text = String(folder.notes?.count ?? 0)
+        cell.countOfNoteInFolderLable.text = String(folder.notes.count)
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
     
 }
+//MARK: - Delegate
 extension FoldersViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

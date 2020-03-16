@@ -71,6 +71,7 @@
                                         <connections>
                                             <outlet property="countOfNoteInFolderLable" destination="cbM-Ri-EbQ" id="K4u-fP-fLx"/>
                                             <outlet property="folderNameLabel" destination="1BM-dH-nTn" id="v3L-VD-c7g"/>
+                                            <segue destination="iWD-hq-ZOa" kind="show" identifier="SegueNotes" id="qdc-fQ-NfM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -91,14 +92,13 @@
                     <navigationItem key="navigationItem" title="Папки" id="fyt-Vh-GK5"/>
                     <connections>
                         <outlet property="foldersTableView" destination="tMI-Nv-Urv" id="Fb6-Yp-L4C"/>
-                        <segue destination="iWD-hq-ZOa" kind="show" identifier="SegueNotes" id="YVE-rV-Iek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8B-TU-u5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357" y="670"/>
         </scene>
-        <!--Notes View Controller-->
+        <!--title-->
         <scene sceneID="jbb-84-bvq">
             <objects>
                 <viewController id="iWD-hq-ZOa" customClass="NotesViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1VC-Zo-h4m"/>
                     </view>
-                    <navigationItem key="navigationItem" id="I1X-eZ-oJE"/>
+                    <navigationItem key="navigationItem" title="title" id="I1X-eZ-oJE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nc2-Vp-hDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

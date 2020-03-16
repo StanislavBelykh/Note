@@ -10,6 +10,6 @@ import Foundation
 
 struct Folder {
     var title: String
-    var notes: [Note]?
+    var notes: [Note] = [Note(title: "Title", body: "Body", createDate: nil, editDate: nil)]
     
 }
