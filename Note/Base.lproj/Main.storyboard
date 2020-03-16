@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="imU-e5-hg9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Папки-->
+        <scene sceneID="vtb-cj-P78">
+            <objects>
+                <viewController id="GWL-Ak-c3n" customClass="FoldersViewController" customModule="Note" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kFN-8A-bR1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEw-qe-GKc">
+                                <rect key="frame" x="294" y="833" width="100" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Новая папка"/>
+                                <connections>
+                                    <action selector="createNewFolder:" destination="GWL-Ak-c3n" eventType="touchUpInside" id="phC-Oe-E2U"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tMI-Nv-Urv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IdentifierFolderCell" rowHeight="44.5" id="yHc-he-LLm" customClass="FoldersTableViewCell" customModule="Note" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yHc-he-LLm" id="hNH-1y-2tK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w2f-hx-hEV">
+                                                    <rect key="frame" x="20" y="8" width="30" height="28"/>
+                                                    <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="9jE-th-SLw"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="30" id="rXT-Vu-KzZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BM-dH-nTn">
+                                                    <rect key="frame" x="58" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbM-Ri-EbQ">
+                                                    <rect key="frame" x="322" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1BM-dH-nTn" firstAttribute="centerY" secondItem="hNH-1y-2tK" secondAttribute="centerY" id="1LK-un-HWn"/>
+                                                <constraint firstItem="1BM-dH-nTn" firstAttribute="leading" secondItem="w2f-hx-hEV" secondAttribute="trailing" constant="8" id="BbK-B8-4k8"/>
+                                                <constraint firstItem="cbM-Ri-EbQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1BM-dH-nTn" secondAttribute="trailing" constant="8" symbolic="YES" id="C53-bB-bck"/>
+                                                <constraint firstAttribute="trailing" secondItem="cbM-Ri-EbQ" secondAttribute="trailing" constant="50" id="Med-zK-o3H"/>
+                                                <constraint firstItem="cbM-Ri-EbQ" firstAttribute="centerY" secondItem="hNH-1y-2tK" secondAttribute="centerY" id="Tmw-xA-wWT"/>
+                                                <constraint firstItem="cbM-Ri-EbQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1BM-dH-nTn" secondAttribute="trailing" priority="750" constant="8" symbolic="YES" id="aqy-xA-qzY"/>
+                                                <constraint firstItem="w2f-hx-hEV" firstAttribute="leading" secondItem="hNH-1y-2tK" secondAttribute="leading" constant="20" id="bQQ-as-LHP"/>
+                                                <constraint firstAttribute="bottom" secondItem="w2f-hx-hEV" secondAttribute="bottom" constant="7" id="cD5-Sv-c3H"/>
+                                                <constraint firstItem="w2f-hx-hEV" firstAttribute="top" secondItem="hNH-1y-2tK" secondAttribute="top" constant="7" id="xDh-fN-gkZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countOfNoteInFolderLable" destination="cbM-Ri-EbQ" id="K4u-fP-fLx"/>
+                                            <outlet property="folderNameLabel" destination="1BM-dH-nTn" id="v3L-VD-c7g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="erm-A2-qSA" firstAttribute="trailing" secondItem="tMI-Nv-Urv" secondAttribute="trailing" id="41d-DK-am8"/>
+                            <constraint firstItem="ZEw-qe-GKc" firstAttribute="top" secondItem="tMI-Nv-Urv" secondAttribute="bottom" constant="8" id="AlI-XP-ArI"/>
+                            <constraint firstItem="ZEw-qe-GKc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="erm-A2-qSA" secondAttribute="leading" symbolic="YES" id="CqE-do-pH4"/>
+                            <constraint firstAttribute="bottom" secondItem="ZEw-qe-GKc" secondAttribute="bottom" constant="30" id="HrQ-kX-xzD"/>
+                            <constraint firstAttribute="trailing" secondItem="ZEw-qe-GKc" secondAttribute="trailing" constant="20" id="c4i-p3-mzs"/>
+                            <constraint firstItem="tMI-Nv-Urv" firstAttribute="top" secondItem="erm-A2-qSA" secondAttribute="top" id="r5l-AO-E3h"/>
+                            <constraint firstItem="tMI-Nv-Urv" firstAttribute="leading" secondItem="erm-A2-qSA" secondAttribute="leading" id="rAl-K1-FVp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="erm-A2-qSA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Папки" id="fyt-Vh-GK5"/>
+                    <connections>
+                        <outlet property="foldersTableView" destination="tMI-Nv-Urv" id="Fb6-Yp-L4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8B-TU-u5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2413.04347826087" y="669.64285714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AuP-YB-OVE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="imU-e5-hg9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RsB-m0-j8u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GWL-Ak-c3n" kind="relationship" relationship="rootViewController" id="hHH-tT-HVj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCb-Df-68J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502.8985507246377" y="669.64285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="folder" catalog="system" width="64" height="46"/>
+    </resources>
+</document>
